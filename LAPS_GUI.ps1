@@ -1,6 +1,9 @@
-﻿###### Only Thing That Needs Updated. Change server names to a DC in both domains #######
+﻿###### Only Thing That Needs Updated. Change server names to a DC in both domains and grouped button to a name that corresponds. #######
 $Server1 = "foobarServer1.domain1.com"
+$RadioButton1 = "domain1"
+
 $Server2 = "foobarServer2.domain2.com"
+$RadioButton2 = "domain2"
 
 ############################################## Start functions ################################################
 ############################################## Form Specs/Unfilled Form 
@@ -36,18 +39,18 @@ function MakeForm {
     $groupBox.ForeColor = "Yellow"
     $Form.Controls.Add($groupBox) 
 
-    # KWS Radio Button
+    # Domain 1 Radio Button
     $RadioButton1 = New-Object System.Windows.Forms.RadioButton 
     $RadioButton1.Location = new-object System.Drawing.Point(15, 15) 
     $RadioButton1.size = New-Object System.Drawing.Size(80, 20) 
     $RadioButton1.Checked = $true 
-    $RadioButton1.Text = $Server1 
+    $RadioButton1.Text = $Button1 
     $groupBox.Controls.Add($RadioButton1) 
-    # TEI Radio Button
+    # Domain 2 Radio Button
     $RadioButton2 = New-Object System.Windows.Forms.RadioButton
     $RadioButton2.Location = new-object System.Drawing.Point(15, 45)
     $RadioButton2.size = New-Object System.Drawing.Size(80, 20)
-    $RadioButton2.Text = $Server2
+    $RadioButton2.Text = $Button2
     $groupBox.Controls.Add($RadioButton2)
 
     # Text Box Label
